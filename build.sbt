@@ -13,6 +13,10 @@ libraryDependencies ++= Seq(
   "org.apache.camel" % "camel-core" % vCamel,
   "org.apache.camel" % "camel-scala" % vCamel,
   "org.apache.camel" % "camel-spring" % vCamel,
+  "org.apache.camel" % "camel-stream" % vCamel,
+  // scala-xml dependency needed when using Scala 2.11+ because native support for XML has been removed
+  // check http://camel.465427.n5.nabble.com/upgrading-to-Scala-2-11-td5765421.html
+  "org.scala-lang.modules" %% "scala-xml" % "1.0.5",
 
   "org.slf4j" % "slf4j-api" % vSlf4j,
   "org.slf4j" % "slf4j-log4j12" % vSlf4j,
